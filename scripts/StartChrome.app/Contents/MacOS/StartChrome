@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+##kill chrome incase it is running
+killall "Google Chrome"
+sleep 10
+
+##get the directory that the script is located
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+CAB=`cat "$DIR/cabinet_name.txt"`
+if [ ${#CAB} -eq 0 ]
+	then
+	CAB=example
+fi
+
+#nohup /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --new-page --allow-file-access-from-files "file://localhost/Volumes/NO NAME/StartChrome.app/Contents/MacOS/index.html" &
+# >>~/Documents/chrome_nohup.out 2>&1 &
+open -a "Google Chrome" --args --allow-file-access-from-files --kiosk "file://localhost$DIR/../../../../../games/frame/index.html?c=$CAB&garbage="
+
+sleep 10
+
+"$DIR/cliclick" c:400,300
+osascript -e 'set Volume 10'

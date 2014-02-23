@@ -1,0 +1,9 @@
+faile@guitar-1player.local
+faile@thief-gun.local
+faile@ads-roller.local
+faile@moto-driver.local
+faile@invasion-knuckles.local
+faile@mysteries-1player.local
+faile@sacred-2player.local
+faile@candy-2player.local
+faile@shotgun-button.local

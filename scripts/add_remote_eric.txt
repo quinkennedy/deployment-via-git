@@ -1,0 +1,2 @@
+cd ~/Documents/DF3
+/usr/local/git/bin/git remote add eric ericishiieckhardt@ee15.local:/Users/ericishiieckhardt/Documents/workspace/Deluxx-Fluxx-III

@@ -1,0 +1,50 @@
+#bootstrapping commands for OSX taken from https://github.com/adenine/Interactive-Installation-Bootstrap/wiki/Check-and-Set-Computer-Settings on Nov 24th 2013
+
+# turn off software update
+softwareupdate --schedule off
+
+#turn off bluetooth
+defaults write /Library/Preferences/com.apple.Bluetooth.plist ControllerPowerState -bool NO
+killall blued
+launchctl unload -w /System/Library/LaunchDaemons/com.apple.blued.plist
+
+#manage sleep and power settings
+systemsetup -setsleep Never
+systemsetup -setdisplaysleep Never
+systemsetup -setharddisksleep Never
+systemsetup -setwakeonnetworeaccess on
+systemsetup -setallowpowerbuttontosleepcomputer off
+systemsetup -setrestartpowerfailure on
+pmset repeat cancel
+
+#auto login
+defaults write /Library/Preferences/com.apple.loginwindow "autoLoginUser" "Faile"
+
+#
+#disable chrome auto-update
+defauts write com.google.Keystone.Agent checkInterval 0
+
+#disable crash reporting
+defaults write com.apple.CrashReporter DialogType none
+
+#disable expose?
+defaults write com.apple.dock mcx-expose-disabled -bool true
+killall Dock
+
+#hide dock
+defaults write com.apple.dock autohide -bool YES
+killall Dock
+
+#disable dashboard
+defaults write com.apple.dashboard mcx-disabled -boolean YES
+
+#disable screensavers
+defaults -currentHost write com.apple.screensaver idleTime 0
+
+#enable remote management
+systemsetup -setremoteappleevents on
+
+#hide drives on desktop
+defaults write com.apple.finder ShowHardDrivesOnDesktop -bool NO
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool NO
+defaults read com.apple.finder ShowExternalHardDrivesOnDesktop -bool NO

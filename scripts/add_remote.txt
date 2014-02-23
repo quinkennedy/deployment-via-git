@@ -1,0 +1,1 @@
+/usr/local/git/bin/git remote add quin quinkennedy@lab-macbookpro-02.local:/Users/quinkennedy/Documents/myRepos/Deluxx-Fluxx-III

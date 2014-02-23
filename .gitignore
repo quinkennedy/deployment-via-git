@@ -1,0 +1,4 @@
+*.dmg
+.DS_Store
+out_dir/
+err_dir/

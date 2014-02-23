@@ -1,0 +1,2 @@
+cd ~/Documents/DF3      
+/usr/local/git/bin/git pull eric master

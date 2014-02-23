@@ -1,0 +1,4 @@
+cd ~/Documents
+mkdir DeluxxFluxxIII.git
+cd DeluxxFluxxIII.git
+/usr/local/git/bin/git --bare init
