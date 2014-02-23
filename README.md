@@ -1,7 +1,7 @@
 **Important:** The scripts in this project assume you have pssh in your PATH. See [Dependencies](#dependencies) for setup instructions.
 
 ##Overview
-This repo contains the scripts and instructions used during the installation and deployment of [Deluxx Fluxx III](http://deluxxfluxx.com/).
+This repo contains the scripts and instructions used during the installation and deployment of [Deluxx Fluxx III](http://deluxxfluxx.com/). Deluxx Fluxx III included nine (9) arcade cabinets which were each driven by a Mac Mini. The arcade games themselves were developed to run in the Chrome web browser. We used many off-the-shelf components for the arcade inputs, but for some of the more unique cabinets we wrote custom software to run on [Ardiuno Leonardo](http://arduino.cc/en/Main/ArduinoBoardLeonardo#.UwpQYl6C4Qg) microcotrollers to translate the various inputs to keyboard and mouse interactions which Chrome could use as input.
 
 The high-level strategy for setup and management was:
 * bootstrap the computers
@@ -9,6 +9,11 @@ The high-level strategy for setup and management was:
 * use ssh to remotely manage the machines
 
 For more detailed instructions, start in the [scripts](scripts/) directory.
+
+####Credits
+* Artists: [Faile](http://www.faile.net/), [BAST](http://www.bastny.com/)
+* Sound Design: [Seth Jabour](http://sethjabour.com/)
+* Development Team: [Eric Ishii-Eckhardt](https://github.com/ericie), [Matthew Cooley](https://github.com/matthewcc), [Julio Terra](https://github.com/julioterra), [Quin Kennedy](https://github.com/quinkennedy)
 
 ##Post-mortem thoughts
 While the scripts made setup fairly painless, git has a number of features that can get in the way when using it in a uni-directional deployment model. There were a few instances where code or a config file had been changed on a machine. We would migrate these changes into the repo manually, so had to be sure to discard changes on the remote machines before re-deploying.
